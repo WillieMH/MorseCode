@@ -74,10 +74,14 @@ const convertWordToArry = (theWord) => {
         convertedArry.push("---**");
       } else if(newArry[i] === "9") {
         convertedArry.push("----*");
-      } 
+      }else if(newArry[i] === " ") {
+        convertedArry.push(",");
+      } else {
+        console.log("You have input invalid characters")
+      }
     }
     const morseWord = convertedArry.join(" ");
     return morseWord;
 };
 
-console.log(convertWordToArry("sos"));
+console.log(convertWordToArry("666"));

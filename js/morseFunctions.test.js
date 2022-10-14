@@ -5,7 +5,7 @@ const {translate} = require('./morseFunctions');
   // test for invalid characters
   it("Should return error if unexpected chars are used" , () => {
     const result = translate("&");
-    expect(result).toBe("Error");
+    expect(result).toBe("You have input invalid characters");
   });
 
   // test one letter input
