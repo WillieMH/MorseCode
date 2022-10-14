@@ -6,7 +6,7 @@
         // rejoin words
         // display words
 
-
+        const morseCode = new Audio("./assets/gol_morse-88897.mp3");
 
 const dataHandler = {
 inputEngWord: "",
@@ -117,6 +117,7 @@ const translationFunction = (theWord) => {
 
 
 const getUserWord = () => {
+  morseCode.play();
   userWord = document.getElementById("user-input").value;
   dataHandler.inputEngWord = userWord;
   translate();
