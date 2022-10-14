@@ -1,4 +1,5 @@
 // imports here
+const {translate} = require('./morseFunctions');
 
 //tests
   // test for invalid characters
