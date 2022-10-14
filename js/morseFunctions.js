@@ -61,7 +61,7 @@ const newWord = (theWord) => {
 
 }
 
-console.log(newWord("sos"));
+console.log(newWord("6654"));
 
 console.log(splitUserInput("I LIKE SHOUTING"));
 
