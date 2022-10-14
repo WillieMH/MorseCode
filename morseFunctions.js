@@ -9,16 +9,26 @@
 
 
 const dataHandler = {
-inputEngWord: null,
+inputEngWord: "",
 engToMorse: "Awaiting Your Input",
 }
 
-const getUserInput = document.querySelector(".userinput");
-const getUserClickToTranslate = document.querySelector(".translate-btn");
+// const getUserInput = document.querySelector(".user-input");
+const getUserClickToTranslate = document.querySelector(".translate-to-morse");
 const getDisplayArea = document.querySelector(".morseReply");
 
 // MAIN FUNCTION START
-const translate = (theWord) => {
+const translate = () => {
+  translationFunction(dataHandler.inputEngWord);
+  getDisplayArea.innerHTML = dataHandler.engToMorse
+  console.log(dataHandler.inputEngWord)
+  console.log(dataHandler.engToMorse);
+}
+// MAIN FUNCTION END
+
+
+
+const translationFunction = (theWord) => {
   let newArry = theWord.split("");
   let convertedArry = [];
   for (let i=0; i < newArry.length; i++) {
@@ -102,14 +112,18 @@ const translate = (theWord) => {
   }
   const morseWord = convertedArry.join(" ");
   dataHandler.engToMorse = morseWord;
-  console.log(dataHandler.engToMorse);
 };
-// MAIN FUNCTION END
-
-translate("sos");
 
 
 
+const getUserWord = () => {
+  userWord = document.getElementById("user-input").value;
+  dataHandler.inputEngWord = userWord;
+  translate();
+}
+
+//event listeners
+getUserClickToTranslate.addEventListener("click", getUserWord)
 
 
 
