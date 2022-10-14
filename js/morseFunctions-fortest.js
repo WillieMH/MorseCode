@@ -1,23 +1,15 @@
+// TEST FOR JEST
+
+
+
 const dataHandler = {
 inputEngWord: null,
 engToMorse: "Awaiting Your Input",
 }
 
+
 // MAIN FUNCTION START
-const translate = (englishWord) => {
-}
-// MAIN FUNCTION END
-
-      // PSEUDO
-        // get input
-        // split input - tick
-        // change to lowercase - tick
-        // loop through each word to translate
-        // rejoin words
-        // display words
-
-// split sentence funtion
-const convertWordToArry = (theWord) => {
+const translate = (theWord) => {
   let newArry = theWord.split("");
   let convertedArry = [];
   for (let i=0; i < newArry.length; i++) {
@@ -96,14 +88,17 @@ const convertWordToArry = (theWord) => {
     }else if(newArry[i] === " ") {
       convertedArry.push(",");
     } else {
-      console.log("You have input invalid characters")
+      return "You have input invalid characters";
     }
   }
   const morseWord = convertedArry.join(" ");
-  return morseWord;
+  dataHandler.engToMorse = morseWord;
+  console.log(dataHandler.engToMorse);
 };
+// MAIN FUNCTION END
 
-console.log(dataHandler.engToMorse);
+translate("sos");
+
 
 
 

@@ -1,5 +1,6 @@
 // imports here
-const {translate} = require('./morseFunctions');
+const {translate} = require('./morseFunctions-fortest.js');
+
 
 //tests
   // test for invalid characters
@@ -17,14 +18,14 @@ const {translate} = require('./morseFunctions');
   // test full word input
   it("Should return '*** --- ***' when user inputs 'sos'" , () => {
     const result = translate("sos");
-    expect(result).toBe("*** ---- ***");
+    expect(result).toBe("*** --- ***");
   });
 
 
   // test full phrase input
   it("Should return '*** --- ***, ** --, *** **** ** -' when user inputs 'sos im shit'" , () => {
     const result = translate("sos im shit");
-    expect(result).toBe("*** --- ***, ** --, *** **** ** -");
+    expect(result).toBe("*** --- *** , ** -- , *** **** ** -");
   });
 
   // test for no input

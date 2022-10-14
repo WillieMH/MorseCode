@@ -10,3 +10,5 @@ Testing the function to ensure that all requirements of the function work correc
 
 
 ## Issues
+  - Issues with testing while having DOM refs in the main js file
+    : Looked at Jest doc, fix not working.  Will come back later and     just disable doc references during testing.
