@@ -1,21 +1,9 @@
-const dataHandler = {
-  inputEngWord: "",
-  engToMorse: "Awaiting Your Input",
-  }
-  
+// TEST FOR JEST
+
   // MAIN FUNCTION START
-  const translate = () => {
-    translationFunction(dataHandler.inputEngWord);
-    getDisplayArea.innerHTML = dataHandler.engToMorse
-    console.log(dataHandler.inputEngWord)
-    console.log(dataHandler.engToMorse);
-  }
-  // MAIN FUNCTION END
-  
-  
-  
-  const translationFunction = (theWord) => {
-    let newArry = theWord.split("");
+  const translate = (theWord) => {
+    const capsOff = theWord.toLowerCase();
+    let newArry = capsOff.split("");
     let convertedArry = [];
     for (let i=0; i < newArry.length; i++) {
       if (newArry[i] === "a") {
@@ -92,26 +80,20 @@ const dataHandler = {
         convertedArry.push("----*");
       }else if(newArry[i] === " ") {
         convertedArry.push(",");
+      } else if(newArry[i] == "") {
+        return "no user input";;
       } else {
         return "You have input invalid characters";
       }
     }
-    return convertedArry;
+    const morseWord = convertedArry.join(" ");
+    return morseWord;
   };
+
+  
+  
+  console.log(translate("pig"));
   
   
   
-  const getUserWord = () => {
-    userWord = document.getElementById("user-input").value;
-    dataHandler.inputEngWord = userWord;
-    translate();
-  }
-  
-  
-  
-  
-  
-  
-  
-  // Don't touch
   module.exports = {translate};

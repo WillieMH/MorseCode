@@ -20,7 +20,7 @@ const getDisplayArea = document.querySelector(".morseReply");
 // MAIN FUNCTION START
 const translate = () => {
   translationFunction(dataHandler.inputEngWord);
-  getDisplayArea.innerHTML = dataHandler.engToMorse
+  getDisplayArea.innerHTML = `<h3>${dataHandler.engToMorse}</h3>`
   console.log(dataHandler.inputEngWord)
   console.log(dataHandler.engToMorse);
 }
@@ -105,12 +105,12 @@ const translationFunction = (theWord) => {
     } else if(newArry[i] === "9") {
       convertedArry.push("----*");
     }else if(newArry[i] === " ") {
-      convertedArry.push(",");
+      convertedArry.push(" / ");
     } else {
       return "You have input invalid characters";
     }
   }
-  const morseWord = convertedArry.join(" ");
+  const morseWord = convertedArry.join(".");
   dataHandler.engToMorse = morseWord;
 };
 

@@ -12,3 +12,9 @@ Testing the function to ensure that all requirements of the function work correc
 ## Issues
   - Issues with testing while having DOM refs in the main js file
     : Looked at Jest doc, fix not working.  Will come back later and     just disable doc references during testing.
+  - Flow of functions needs to be corrected
+  - Styling & responsiveness need more work
+
+  TEST FAILS
+  1 - Can't handle numbers.  Fix by using number to string/split and treat as a char.
+  2 - no user input throws up error, need check before going through if statemem to check if empty and returning empty error before going any furter (Set dataHandle.engToMorse to show error in "display) 

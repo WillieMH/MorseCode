@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/image.jpg);
+  background-size: 825px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main h1, main h2 {
+  color: azure;
+}
+main input {
+  width: 300px;
+  margin: 10px;
+  padding: 8px;
+  border: 5px solid goldenrod;
+  border-radius: 8px;
+}
+main #display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 400px;
+  background-color: aliceblue;
+  border: 5px dashed black;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 5px;
+}
+main button {
+  background-color: antiquewhite;
+  padding: 12px;
+  border-radius: 50%;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
