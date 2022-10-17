@@ -110,7 +110,7 @@ const translationFunction = (theWord) => {
       return "You have input invalid characters";
     }
   }
-  const morseWord = convertedArry.join(".");
+  const morseWord = convertedArry.join(" ");
   dataHandler.engToMorse = morseWord;
 };
 
